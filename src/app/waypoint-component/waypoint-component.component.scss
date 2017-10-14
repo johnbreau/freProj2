@@ -1,0 +1,45 @@
+.my-waypoint {
+    position: relative;
+    top: 50%;
+    width: 400px;
+    height: 1400px;
+    background-color: tan;
+}
+
+@keyframes move-down {
+    from { 
+            position: relative;
+            top: 5px;
+        }
+    to   { 
+            position: relative;
+            top: 375px;
+        }
+  }
+
+  @keyframes move-up {
+    from { 
+            position: relative;
+            top: 375px;
+        }
+    to   { 
+            position: relative;
+            top: 5px;
+        }
+  }
+
+  .animation-down {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: move-down;
+    animation-duration: 4s;
+}
+
+.animation-up {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: move-up;
+    animation-duration: 4s;
+}
