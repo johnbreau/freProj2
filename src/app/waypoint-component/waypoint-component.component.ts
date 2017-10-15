@@ -10,12 +10,14 @@ declare var Waypoint: any;
 export class WaypointComponentComponent implements OnInit {
   private waypoint: any;
   private direction: string;
+  private newClick = 0;
   constructor(
   ) {
    }
 
   ngOnInit() {
     const myContainer = <Element>document.querySelector('.littlebox');
+    const clickContainer = <Element>document.querySelector('.clickContainer');
 
     this.waypoint = new Waypoint({
       element: document.getElementById('my-waypoint'),
@@ -30,6 +32,11 @@ export class WaypointComponentComponent implements OnInit {
         }
       }
     });
+  }
+
+  clickContainer() {
+    ++this.newClick;
+    console.log(this.newClick);
   }
 
 }
